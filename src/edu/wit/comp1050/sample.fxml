@@ -1,0 +1,31 @@
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+
+<GridPane fx:controller="edu.wit.comp1050.Controller" xmlns:fx="http://javafx.com/fxml" alignment="CENTER">
+    <VBox>
+        <VBox fx:id="verticalBox" spacing="10" alignment="CENTER" style="-fx-border-color: blue; -fx-padding: 25">
+            <Label text="MasterMind" style="-fx-font-size: 20;" textFill="darkolivegreen"/>
+            <HBox fx:id="robox" alignment="CENTER" style="-fx-padding: 10" spacing="10"/>
+            <VBox fx:id="humanGuess" spacing="10" alignment="CENTER" style="-fx-border-color: red; -fx-padding: 25"/>
+            <Label fx:id="resultText" text="Result" style="-fx-font-size: 10;"/>
+        </VBox>
+        <HBox alignment="BASELINE_CENTER" style="-fx-padding: 10" spacing="10">
+            <Circle radius="15" fill="red" onMouseClicked="#redCircle"/>
+            <Circle radius="15" fill="blue" onMouseClicked="#blueCircle"/>
+            <Circle radius="15" fill="green" onMouseClicked="#greenCircle"/>
+            <Circle radius="15" fill="yellow" onMouseClicked="#yellowCircle"/>
+            <Circle radius="15" fill="pink" onMouseClicked="#pinkCircle"/>
+            <Circle radius="15" fill="purple" onMouseClicked="#purpleCircle"/>
+            <Circle radius="15" fill="black" onMouseClicked="#blackCircle"/>
+        </HBox>
+        <HBox alignment="CENTER">
+            <Button text="Delete" onMouseClicked="#buttonPressed"/>
+            <Button text="Skip" onMouseClicked="#skipClick"/>
+            <Button text="Check" onMouseClicked="#changeText"/>
+        </HBox>
+    </VBox>
+</GridPane>
